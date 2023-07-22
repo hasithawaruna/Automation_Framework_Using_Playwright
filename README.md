@@ -3,11 +3,11 @@
 The goal is to showcase various user interactions on the "https://the-internet.herokuapp.com/" web application by creating automated tests that cover specific user flows. These tests will be implemented using Playwright and TypeScript. The tests will simulate how users navigate and interact with the web application, verifying that it functions correctly and meets the desired expectations.
 
 ## Table of contents
-- [Install dependencies]
-- [Run test]
+- [Install Dependencies]
+- [Run Test]
 - [Page Object Model(POM)]
-- [Folder structure]
-- [Dotenv module (.env)] 
+- [Folder Structure]
+- [Dotenv Module (.env)] 
 - [Specs]
 - [Pages] 
 - [Test Execution Methods]
@@ -15,7 +15,7 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Release Version Guide]
 
 
-## Install dependencies
+## Install Dependencies
 
 Install NodeJs (Skip if you already installed NodeJs)
 
@@ -35,8 +35,7 @@ Install dependencies
 Install Node modules: npm i
 ```
 
-## Run test
-
+## Run Test
 
 ```bash
 npm test
