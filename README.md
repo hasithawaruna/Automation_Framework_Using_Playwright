@@ -7,9 +7,10 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Run test]
 - [Page Object Model(POM)]
 - [Folder structure]
-- [Fixtures]
+- [Dotenv module (.env)] 
 - [Specs]
-- [Execution]
+- [Pages] 
+- [Test Execution Methods]
 - [Reporting]
 
 
