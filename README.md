@@ -184,3 +184,7 @@ Once the execution is done you can open the playwright report by running the com
 ├── playwright-report/   
 │         ├──index.html - Right Click and Navigate to the directory to open the .HTML file via the browser    
 ```
+
+### Release Versions
+
+https://github.com/hasithawaruna/WebAutomator_Playwrite/releases
