@@ -12,6 +12,7 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Pages] 
 - [Test Execution Methods]
 - [Reporting]
+- [Release Version Guide]
 
 
 ## Install dependencies
@@ -170,7 +171,7 @@ Tests can be executed either via the command line or from the Playwright test ru
        ```
 
 
-### Reporting
+## Reporting
 
 
 Once the execution is done you can open the playwright report by running the command
@@ -178,13 +179,13 @@ Once the execution is done you can open the playwright report by running the com
   npx playwright show-report
 ```
 
-### To View HTML Report
+#### To View HTML Report
 
 ```bash
 ├── playwright-report/   
 │         ├──index.html - Right Click and Navigate to the directory to open the .HTML file via the browser    
 ```
 
-### Release Version Guide
+## Release Version Guide
 
 https://github.com/hasithawaruna/WebAutomator_Playwrite/releases
