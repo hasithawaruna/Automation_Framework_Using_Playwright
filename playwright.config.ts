@@ -30,6 +30,14 @@ export default defineConfig({
    // trace: 'on-first-retry',
    trace: 'retain-on-failure',
   },
+  //Maximum time that one test can run
+  timeout:50 * 1000,
+  
+  expect:{
+    //Maximum time expect()
+    timeout:10000
+
+  },
   /* Configure projects for major browsers */
   projects: [
     {
