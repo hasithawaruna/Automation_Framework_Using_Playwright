@@ -16,11 +16,16 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 
 ## Install dependencies
 
+Install NodeJs (Skip if you already installed NodeJs)
+
+```bash
+Go to : 'https://nodejs.org/en/download' and install
+``` 
 
 Clone the repository 
  
 ```bash
-git clone https://github.com/hasithawaruna/WebAutomator_Playwrite.git
+git clone https://hasithawaruna:<Use_Access_Key_Shared_In_EMail>@github.com/hasithawaruna/WebAutomator_Playwrite.git
 ``` 
 
 Install dependencies
