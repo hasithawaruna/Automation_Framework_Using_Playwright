@@ -34,10 +34,10 @@ git clone https://github.com/hasithawaruna/WebAutomator_Playwrite
 
 ## Install dependencies
 
-Follow the root directory of the cloned project and execute the below command
+Follow the root directory of the cloned project and execute the below command to install node modules 
  
 ```bash
-Install Node modules: npm i
+npm i
 ```
 
 ## Run Test
