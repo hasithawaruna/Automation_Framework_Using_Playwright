@@ -3,6 +3,8 @@
 The goal is to showcase various user interactions on the "https://the-internet.herokuapp.com/" web application by creating automated tests that cover specific user flows. These tests will be implemented using Playwright and TypeScript. The tests will simulate how users navigate and interact with the web application, verifying that it functions correctly and meets the desired expectations.
 
 ## Table of contents
+- [Prerequisites]
+- [Clone Private Project]
 - [Install Dependencies]
 - [Run Test]
 - [Page Object Model(POM)]
@@ -15,27 +17,58 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Release Version Guide]
 
 
-## Install Dependencies
-
-Install NodeJs (Skip if you already installed NodeJs)
+## Prerequisites
 
 ```bash
-Go to : 'https://nodejs.org/en/download' and install
-``` 
+ NodeJs
 
-Clone the repository 
- 
+ Git
+```
+
+## Clone Private Project
+
+### Follow one of the below methods to clone the project
+
+
+#### Method 1: 
+
+Run the below command to clone the private repository directly
+
 ```bash
-git clone https://hasithawaruna:<Use_Access_Key_Shared_In_EMail>@github.com/hasithawaruna/WebAutomator_Playwrite.git
+git clone https://hasithawaruna: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@github.com/hasithawaruna/WebAutomator_Playwrite.git
 ``` 
 
-Install dependencies
+#### Method 2: 
+
+Follow the below steps to clone the repository using the provided access key (Github CLI)
+
+```bash
+gh auth login
+```
+```bash
+select 'Authenticate Git with your GitHub credentials?'
+```
+```bash
+select 'Paste an authentication token'
+```
+```bash
+provide this token: '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'
+```
+```bash
+git clone https://github.com/hasithawaruna/WebAutomator_Playwrite.git
+``` 
+
+## Install dependencies
+
+Follow the root directory of the cloned project and execute the below command
  
 ```bash
 Install Node modules: npm i
 ```
 
 ## Run Test
+
+Use the below command to run the Playwrite test
 
 ```bash
 npm test
@@ -73,9 +106,11 @@ The Page Object Model (POM) in Playwright is a design pattern used to organize w
     │
     │── .env.test                                 # Confiugurations used in the test environment
     │
-    ├── playwright.config.ts                      # Confiugurations of playwright
+    ├── playwright.config.ts                      # Confiugurations of Playwright
     │  
-    ├── node_modules/                              # Storing installed project dependencies
+    ├── node_modules/                             # Storing installed project dependencies
+    │ 
+    ├── release_notes/                            # Maintain all release notes for each version
     │ 
     ├── package.json                              # Dependency and script management     
     │ 
