@@ -3,7 +3,7 @@
 The goal is to showcase various user interactions on the "https://the-internet.herokuapp.com/" web application by creating automated tests that cover specific user flows. These tests will be implemented using Playwright and TypeScript. The tests will simulate how users navigate and interact with the web application, verifying that it functions correctly and meets the desired expectations.
 
 ## Table of contents
-- [Prerequisites]
+- [Version Guide]
 - [Clone Private Project]
 - [Install Dependencies]
 - [Run Test]
@@ -14,14 +14,16 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Pages] 
 - [Test Execution Methods]
 - [Reporting]
-- [Release Version Guide]
+- [Release Notes]
 
 
-## Version guide
+## Version Guide
 
 ```bash
- Node v18.12.0
- playwright v1.36
+
+ NodeJs - version 18.12.0
+
+ playwright - version 1.36
 
 ```
 
@@ -33,7 +35,7 @@ Run the below command to clone the project
 git clone https://github.com/hasithawaruna/WebAutomator_Playwrite
 ``` 
 
-## Install dependencies
+## Install Dependencies
 
 Follow the root directory of the cloned project and execute the below command to install node modules 
  
@@ -92,7 +94,7 @@ The Page Object Model (POM) in Playwright is a design pattern used to organize w
     └── package-lock.json                         # Dependency version locking
 
 
-## Dotenv module (.env) 
+## Dotenv Module (.env) 
 
  
 The '.env.test' file in Playwright TypeScript web automation allows setting environment-specific variables (e.g., base URLs, credentials) for easier configuration and testing across different test environments.
@@ -195,6 +197,6 @@ Once the execution is done you can open the playwright report by running the com
 │         ├──index.html - Right Click and Navigate to the directory to open the .HTML file via the browser    
 ```
 
-## Release Version Guide
+## Release Notes
 
 https://github.com/hasithawaruna/WebAutomator_Playwrite/releases
