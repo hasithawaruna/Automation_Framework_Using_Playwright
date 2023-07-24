@@ -17,7 +17,7 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Release Version Guide]
 
 
-## Prerequisites
+## Version guide
 
 ```bash
  Node v18.12.0
