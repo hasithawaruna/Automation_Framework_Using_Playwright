@@ -3,7 +3,7 @@
 The goal is to showcase various user interactions on the "https://the-internet.herokuapp.com/" web application by creating automated tests that cover specific user flows. These tests will be implemented using Playwright and TypeScript. The tests will simulate how users navigate and interact with the web application, verifying that it functions correctly and meets the desired expectations.
 
 ## Table of contents
-- [Version Guide]
+- [Prerequisits]
 - [Clone Private Project]
 - [Install Dependencies]
 - [Run Test]
@@ -17,7 +17,7 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 - [Release Notes]
 
 
-## Version Guide
+## Prerequisits
 
 ```bash
 
