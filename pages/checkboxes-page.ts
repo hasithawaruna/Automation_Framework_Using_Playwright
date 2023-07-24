@@ -1,13 +1,13 @@
-import { expect, type Locator, type Page } from '@playwright/test'
+import { type Locator, type Page } from '@playwright/test'
 import dotenv from 'dotenv'
 
 dotenv.config({
-  path:'.env.test'
+  path: '.env.test'
 })
 
 export class CheckboxPage {
-    
-  //Locators Listed Below  
+
+  //Locators
   page: Page
   basePageTitle: Locator;
   subPageTitle: Locator;
@@ -15,7 +15,7 @@ export class CheckboxPage {
   checkBox2: Locator
   selectSubPage: Locator
 
-  //Expected values Listed Below
+  //Expected values
   expectedBasePageTitile = 'Welcome to the-internet'
   expectedSubPageTitile = 'Checkboxes'
 
@@ -25,11 +25,10 @@ export class CheckboxPage {
     this.subPageTitle = page.locator("h3")
     this.checkBox1 = page.locator("//*[@type='checkbox'][1]")
     this.checkBox2 = page.locator("//*[@type='checkbox'][2]")
-    this.selectSubPage = page.getByRole('link', { name: 'Checkboxes',exact: true})
+    this.selectSubPage = page.getByRole('link', { name: 'Checkboxes', exact: true })
   }
 
-  //Page Navigation
-  async goto() {
+  async goToBasePage() {
     await this.page.goto(process.env.BASE_URL ?? '')
   }
 
@@ -39,17 +38,19 @@ export class CheckboxPage {
 
   async checkCheckbox() {
     await this.checkBox1.check()
-}
+  }
 
-//Select and check checkbox by given value => expected 'checkbox1' or 'checkbox2' text as values.
-  async uncheckCheckbox(checkboxName : string) {
-if(checkboxName == 'checkbox1'){
-    await this.checkBox1.uncheck() 
-}
-else if (checkboxName == 'checkbox2'){
-    await this.checkBox2.uncheck() 
-}
-else{
-console.log("Invalid Checkbox Name")
-}}
+  // Deselect checkbox by value. Expected 'checkbox1' or 'checkbox2' as values.
+  async uncheckCheckbox(checkboxName: string) {
+    const checkboxValue = checkboxName.toUpperCase()
+    if (checkboxValue == 'CHECKBOX1') {
+      await this.checkBox1.uncheck()
+    }
+    else if (checkboxValue == 'CHECKBOX2') {
+      await this.checkBox2.uncheck()
+    }
+    else {
+      console.log("Invalid checkbox value provided. Expected 'checkbox1' or 'checkbox2' as values")
+    }
+  }
 }

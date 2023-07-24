@@ -1,21 +1,21 @@
-import {test,expect, Page} from '@playwright/test'
-import { DragAndDropPage } from '../pages/drag-and-drop-page'
+import { test, expect, Page } from '@playwright/test'
+import { DragAndDropPage } from '../pages/dragAndDrop-page'
 
-let page:Page
+let page: Page
 
 // Below code will run before each test
-test.beforeEach(async({browser})=>{
+test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
     const dragAndDropObj = new DragAndDropPage(page)
-    await dragAndDropObj.goto()
+    await dragAndDropObj.goToBasePage()
 });
 
 // Below code will run after each test
 test.afterEach(async () => {
     await page.close()
-  });
+});
 
-test('verify user can drag and drop an item on the web page',async()=>{
+test('verify user can drag and drop an item on the web page', async () => {
     const dragAndDropObj = new DragAndDropPage(page)
     await expect(dragAndDropObj.basePageTitle).toContainText(dragAndDropObj.expectedBasePageTitile)
     await dragAndDropObj.goToSubPage()

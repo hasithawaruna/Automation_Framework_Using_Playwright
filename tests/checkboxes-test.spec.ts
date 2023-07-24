@@ -1,21 +1,21 @@
-import {test,expect, Page} from '@playwright/test'
-import { CheckboxPage } from '../pages/checkbox-page'
+import { test, expect, Page } from '@playwright/test'
+import { CheckboxPage } from '../pages/checkboxes-page'
 
-let page:Page
+let page: Page
 
 // Below code will run before each test
-test.beforeEach(async({browser})=>{
+test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
     const CheckboxObj = new CheckboxPage(page)
-    await CheckboxObj.goto()
+    await CheckboxObj.goToBasePage()
 });
 
 // Below code will run after each test
 test.afterEach(async () => {
     await page.close()
-  });
+});
 
-test('verify user can check a checkbox on the web page',async()=>{
+test('verify user can check a checkbox on the web page', async () => {
     const CheckboxObj = new CheckboxPage(page)
     await expect(CheckboxObj.basePageTitle).toContainText(CheckboxObj.expectedBasePageTitile)
     await CheckboxObj.goToSubPage()
@@ -25,7 +25,7 @@ test('verify user can check a checkbox on the web page',async()=>{
     await expect(CheckboxObj.checkBox2).toBeChecked()
 })
 
-test('verify user can uncheck a previously checked checkbox on the web page',async()=>{
+test('verify user can uncheck a previously checked checkbox on the web page', async () => {
     const CheckboxObj = new CheckboxPage(page)
     await expect(CheckboxObj.basePageTitle).toContainText(CheckboxObj.expectedBasePageTitile)
     await CheckboxObj.goToSubPage()

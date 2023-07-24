@@ -1,13 +1,13 @@
-import { expect, type Locator, type Page } from '@playwright/test'
+import { type Locator, type Page } from '@playwright/test'
 import dotenv from 'dotenv'
 
 dotenv.config({
-  path:'.env.test'
+  path: '.env.test'
 })
 
 export class AddRemoveElemetsPage {
 
-  //Locators Listed Below  
+  //Locators
   page: Page;
   basePageTitle: Locator;
   subPageTitle: Locator;
@@ -15,20 +15,20 @@ export class AddRemoveElemetsPage {
   deleteButtonName: Locator
   selectSubPage: Locator
 
-  //Expected values Listed Below
+  //Expected values
   expectedBasePageTitile = 'Welcome to the-internet'
   expectedSubPageTitile = 'Add/Remove Elements'
- 
+
   constructor(page: Page) {
     this.page = page
     this.basePageTitle = page.locator("h1")
     this.subPageTitle = page.locator("h3")
-    this.addButtonName = page.getByRole('button',{ name :'Add Element'})
-    this.selectSubPage = page.getByRole('link', { name: 'Add/Remove Elements',exact: true})
-    this.deleteButtonName = page.getByRole('button',{ name :'Delete'})
+    this.addButtonName = page.getByRole('button', { name: 'Add Element' })
+    this.selectSubPage = page.getByRole('link', { name: 'Add/Remove Elements', exact: true })
+    this.deleteButtonName = page.getByRole('button', { name: 'Delete' })
   }
 
-  async goTo() {
+  async goToBasePage() {
     await this.page.goto(process.env.BASE_URL ?? '')
   }
 

@@ -20,8 +20,9 @@ The goal is to showcase various user interactions on the "https://the-internet.h
 ## Prerequisites
 
 ```bash
- NodeJs
- Git
+ Node v18.12.0
+ playwright v1.36
+
 ```
 
 ## Clone Private Project
